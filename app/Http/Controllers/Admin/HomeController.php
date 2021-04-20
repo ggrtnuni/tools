@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    protected $_baseview = 'home';
+    protected $_baseview = 'admin.home';
 
     /**
      * Create a new controller instance.
@@ -15,6 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('auth');
     }
 
     /**
